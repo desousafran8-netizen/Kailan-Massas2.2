@@ -147,7 +147,7 @@ function mostrarMenuMetade(){
     <label>Tamanho:
       <select id="tamanhoMetade">
         <option value="M">M - R$ 35</option>
-        <option value="G">G - R$ 45</option>
+        <option value="G">G - R$ 50</option>
       </select>
     </label>
     <button>Adicionar</button>
@@ -159,7 +159,7 @@ function mostrarMenuMetade(){
     const lado1 = document.getElementById("lado1").value;
     const lado2 = document.getElementById("lado2").value;
     const tamanho = document.getElementById("tamanhoMetade").value;
-    const preco = tamanho === "M" ? 35 : 45;
+    const preco = tamanho === "M" ? 35 : 50;
     const nomeItem = `Metade a Metade (${lado1} / ${lado2}) (${tamanho})`;
     carrinho.push({nome:nomeItem, preco});
     atualizarCarrinho();
@@ -247,3 +247,4 @@ document.getElementById("enviar").addEventListener("click", ()=>{
   const url = `https://wa.me/${shopPhone}?text=${encodeURIComponent(msg)}`;
   window.open(url);
 });
+
